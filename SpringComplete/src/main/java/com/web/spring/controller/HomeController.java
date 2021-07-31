@@ -14,9 +14,20 @@ public class HomeController {
 	@Autowired
 	UserMapper userMapper;
 
-	@GetMapping("/")
+	@GetMapping("/login")
 	public ModelAndView index() {
 		ModelAndView mav = new ModelAndView("index");
+		
+		/*
+		 * System.out.println(AES.encrypt("jdbc:mysql://127.0.0.1:3306/login",
+		 * secrectKey)); System.out.println(AES.encrypt("root", secrectKey));
+		 * System.out.println(AES.encrypt("1234", secrectKey));
+		 */
+		return mav;
+	}
+	@GetMapping("/home")
+	public ModelAndView home() {
+		ModelAndView mav = new ModelAndView("home");
 		
 		/*
 		 * System.out.println(AES.encrypt("jdbc:mysql://127.0.0.1:3306/login",
